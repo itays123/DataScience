@@ -1,3 +1,4 @@
+# Exercise 5 - two-dimentional arrays
 import numpy as np
 
 # Create matrix
