@@ -4,8 +4,8 @@ import numpy as np
 # Exercise 1
 
 x= np.arange(0, 30, 1)
-y1= np.arange(0, 30, 1) ** 2
-y2= np.arange(0, 30, 1) ** 3
+y1= x ** 2
+y2= x ** 3
 print(x)
 print(y1)
 print(y2)
