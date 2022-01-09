@@ -1,6 +1,5 @@
 # Exercise 10 - binary pictures to colored image and binary image to black and white image
 import numpy as np
-import matplotlib.pyplot as plt
 
 MAX_RGB_VALUE=255
 
