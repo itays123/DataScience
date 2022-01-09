@@ -1,3 +1,4 @@
 {
-  "python.autoComplete.extraPaths": ["./04 Python-Life-Expectency"]
+  "python.autoComplete.extraPaths": ["./04 Python-Life-Expectency"],
+  "python.analysis.extraPaths": ["./04 Python-Life-Expectency"]
 }
