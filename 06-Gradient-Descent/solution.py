@@ -30,6 +30,6 @@ def CalculateCost(x,y,m,b):
     return np.sum(errors ** 2)
 
 # Calculate the effect of the advertisement budget over the sales
-m, b = GradientDescent(advertising, sales, 0.1, 100)
+m, b = GradientDescent(advertising, sales)
 print("m:", m, "b:", b, "COST:", CalculateCost(advertising, sales, m, b))
 print("With one more million euros inversted, sales are expected to grow by " + str(m) + " million euros")
