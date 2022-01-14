@@ -50,8 +50,8 @@ m, b = LineReg(x, y)
 cost = CalculateCost(x, y, [b, m], CONSTANT)
 print("Control: cost=", cost)
 
-# First, Second, Third power
-for power in [1,2,3]:
-    coefficients = ImprovedGradientDescent(x,y, learning_rate=0.1, max_pow=power, epochs=2000 * power)
+# First, Second, Third, Fourth, Fifth power
+for power in [1,2,3,4,5]:
+    coefficients = ImprovedGradientDescent(x,y, learning_rate=0.1, max_pow=power, epochs=1000 * (power ** 4))
     cost = CalculateCost(x,y, coefficients, CONSTANT)
     print("Power=", power, "cost=", cost)
