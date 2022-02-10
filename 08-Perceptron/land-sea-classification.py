@@ -128,7 +128,11 @@ testSources = [
     'test/test1.jpg',
     'test/test2.jpg',
     'test/test3.jpg',
-    'test/test4.jpg'
+    'test/test4.jpg',
+    'test/test5.jpg',
+    'test/test6.jpg',
+    'test/test7.jpg',
+    'test/test8.jpg',
 ]
 
 for source in testSources:
