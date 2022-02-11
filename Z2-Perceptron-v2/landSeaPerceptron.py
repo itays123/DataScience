@@ -4,7 +4,6 @@
 import string
 from PIL import Image
 from perceptron import * # perceptron and numpy
-import random
 
 NUM_OF_INPUTS = 2
 xAxisColor = 1 # green index in RGB
