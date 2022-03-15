@@ -45,7 +45,6 @@ def findKNextNeighbors(point, data, k=3):
     indexes = distances.argsort()[:k]
     return indexes
 
-
 train_data = np.array( [
     [ 2.0 , 3.0 ],
     [ 3.0 , 7.0 ],
@@ -76,18 +75,20 @@ test_data = np.array([[ 6.0 , 7.0 ]])
 # expected for k=1: [[5. 8.]]
 # print(train_data[findKNextNeighbors(test_data, train_data)]) 
 
+# find most common element
+def mostFrequent(elements):
+    # get unique values and the count of each in the labels
+    values, counts = np.unique(elements, return_counts=True)
+    freqIndex = np.argmax(counts)
+    return values[freqIndex]
+
 # predict label of an input point based on the KNN algorithm
 def predict(point, data, labels, k=3):
     knnIndexes = findKNextNeighbors(point, data, k)
     knnLabels = labels[knnIndexes]
-    # get unique values and the count of each in the labels
-    values, counts = np.unique(knnLabels, return_counts=True)
-    freqIndex = np.argmax(counts)
-    return values[freqIndex]
+    return mostFrequent(knnLabels)
 
 # expected for k=3: 2
 print(predict(test_data, train_data, train_lbl)) 
 # expected for k=1: 1
 print(predict(test_data, train_data, train_lbl, k=1)) 
-
-
