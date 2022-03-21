@@ -69,11 +69,16 @@ train_lbl = np.array( [
     [ 2 ] 
 ])
 
+print('List of points: ', train_data)
+
 test_data = np.array([[ 6.0 , 7.0 ]])
 
+print('Test point: ', test_data)
+print('K cloest point to the test point: ')
 # expected for k=3: [[5. 8.]  [6. 5.]  [7. 9.]]
+print('For k=3', train_data[findKNextNeighbors(test_data, train_data)]) 
 # expected for k=1: [[5. 8.]]
-# print(train_data[findKNextNeighbors(test_data, train_data)]) 
+print('For k=1', train_data[findKNextNeighbors(test_data, train_data, k=1)]) 
 
 # find most common element
 def mostFrequent(elements):
@@ -88,7 +93,8 @@ def predict(point, data, labels, k=3):
     knnLabels = labels[knnIndexes]
     return mostFrequent(knnLabels)
 
+print('Label (1/2) of the majority of the K cloest points: ')
 # expected for k=3: 2
-print(predict(test_data, train_data, train_lbl)) 
+print('For k=3: ', predict(test_data, train_data, train_lbl)) 
 # expected for k=1: 1
-print(predict(test_data, train_data, train_lbl, k=1)) 
+print('For k=1: ', predict(test_data, train_data, train_lbl, k=1)) 
