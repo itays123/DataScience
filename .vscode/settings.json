@@ -1,10 +1,12 @@
 {
   "python.autoComplete.extraPaths": [
     "./04 Python-Life-Expectency",
-    "./05 Python-Base"
+    "./05 Python-Base",
+    "./09-KNN"
   ],
   "python.analysis.extraPaths": [
     "./04 Python-Life-Expectency",
-    "./05 Python-Base"
+    "./05 Python-Base",
+    "./09-KNN"
   ]
 }
